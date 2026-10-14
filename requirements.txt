@@ -1,8 +1,13 @@
 # Core Computer Vision & Deep Learning
 ultralytics>=8.0.0
-opencv-python-headless==4.10.84
+opencv-python-headless==4.10.0.84
 pillow>=10.0.0
 numpy>=1.24.0
+streamlit>=1.30.0
+pandas>=2.0.0
+huggingface_hub>=0.20.0
+streamlit-webrtc>=0.47.0
+av>=11.0.0
 
 # User Interface & Data Analysis
 streamlit>=1.30.0
