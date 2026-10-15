@@ -15,7 +15,16 @@ import time
 from datetime import datetime
 from typing import Optional
 
-import cv2
+import subprocess
+import sys
+
+try:
+    import cv2
+except ImportError:
+    # Remove GUI OpenCV pulled transitively by ultralytics and install headless
+    subprocess.check_call([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python", "opencv-python-headless"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "opencv-python-headless"])
+    import cv2
 import numpy as np
 import pandas as pd
 from PIL import Image
